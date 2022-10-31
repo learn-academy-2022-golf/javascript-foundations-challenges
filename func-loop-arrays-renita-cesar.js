@@ -4,7 +4,16 @@
 
 // Write a function that takes in an array of numbers and returns an array with all numbers multiplied by 3.
 const testArr1 = [3, 9, 15, 4, 10]
-// // output: [9, 27, 45, 12, 30]
+// output: [9, 27, 45, 12, 30]
+
+/*
+Set up a function with const mult3
+A parameter of arr
+Declare a new variable newArr that will hold an empty array
+In a for loop
+    Multiply the current number by three and use .push() to add it onto the new array
+Return newArr
+*/
 const mult3 = (arr) => {
     let newArr = []
     for (let i = 0; i < arr.length; i++){
@@ -114,8 +123,24 @@ const indexHighestNumber = [1, 4, 2, 3]
 /*
 Create a function with const = largeNum
 It will take the parameter of numArray
-Make a new variable called 
+Make a new variable called largestNumber = highest number [0]
+Run a for loop with and if statement
+    check whether the current number is higher than variable largestNumber
+    if so, make largestNumber = current number
+Return numArray.indexOf(largestNumber)
 */
+
+const largeNum = (numArray) => {
+    let largestNumber = numArray[0];
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] > largestNumber) {
+            largestNumber = numArray[i]
+        }
+    }
+    return numArray.indexOf(largestNumber)
+}
+
+console.log(largeNum(indexHighestNumber));
 
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
