@@ -29,30 +29,28 @@
 
 
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
-// const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
-// // output: [-7, 3, 5, 13]
+const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+// output: [-7, 3, 5, 13]
+// We are going to create a function 
+//input: testArr2
+//output: A new array with only the odd numbers displayed
+// MAKE SURE RETURN IS OUT OF THE FOR LOOP 
 
+// const onlyOdd = (arr) => {
+//         let newArr = []
+//         for(let i = 0; i < arr.length; i++){
+//         if (arr [i] % 2 !== 0){
+//             newArr.push(arr[i])
+//         }
+//     }
+//             return newArr
+// }
+//     console.log(onlyOdd(testArr2))
 
 
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-// const comboArr = [
-//   7,
-//   "n",
-//   true,
-//   "i",
-//   "c",
-//   10,
-//   "e",
-//   -388,
-//   "w",
-//   3,
-//   "o",
-//   0,
-//   "r",
-//   false,
-//   "k"
-// ]
+const comboArr = [7,"n",true,"i", "c", 10, "e", -388,"w", 3, "o", 0, "r", false,"k"]
 // // output: "nicework"
 // Create a function that takes in an array of numbers and returns the sum.
 // const addThese1 = [1, 2, 3, 4]
