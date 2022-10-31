@@ -34,34 +34,89 @@ const oddMaker = (numberArray) => {
     return oddArray
 }
 console.log(oddMaker(testArr2))
-// Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-// const comboArr = [
-//   7,
-//   "n",
-//   true,
-//   "i",
-//   "c",
-//   10,
-//   "e",
-//   -388,
-//   "w",
-//   3,
-//   "o",
-//   0,
-//   "r",
-//   false,
-//   "k"
-// ]
-// // output: "nicework"
-// Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
-// // output: 10
 
-// const addThese2 = []
-// // output: 0
+// Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
+const comboArr = [
+  7,
+  "n",
+  true,
+  "i",
+  "c",
+  10,
+  "e",
+  -388,
+  "w",
+  3,
+  "o",
+  0,
+  "r",
+  false,
+  "k"
+]
+
+/*
+Create a new function using const lettersOnly
+Input is the parameter named randomArray
+Create a new empty array with the variable name letters
+Set up a for loop
+    for each iteration check the typeof each element
+    if it is a letter use .push() to add it to the end of the array of letters
+Create a new variable called makeString which uses .join() to convert letters to a string
+Return the string makeString
+*/
+
+const lettersOnly = (randomArray) => {
+    let letters = [];
+    for (let i = 0; i < randomArray.length; i++) {
+        if (typeof randomArray[i] == "string") {
+            letters.push(randomArray[i])
+        }
+    }
+    let makeString = letters.join("")
+    return makeString
+}
+
+console.log(lettersOnly(comboArr));
+// output: "nicework"
+
+
+// Create a function that takes in an array of numbers and returns the sum.
+const addThese1 = [1, 2, 3, 4]
+// output: 10
+
+const addThese2 = []
+// output: 0
+
+/*
+Set up a function with const makeSum
+Parameter will be named numsToAdd
+Set up variable called sum = 0
+In a for loop
+    add the current number to the variable sum
+Return sum
+*/
+
+const makeSum =(numsToAdd) => {
+    let sum = 0;
+    for (let i = 0; i < numsToAdd.length; i++) {
+        sum = numsToAdd[i] + sum;
+    }
+    return sum 
+}
+
+console.log(makeSum(addThese1));
+console.log(makeSum(addThese2));
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// const indexHighestNumber = [1, 4, 2, 3]
-// // output: 1
+const indexHighestNumber = [1, 4, 2, 3]
+// output: 1
+
+/*
+Create a function with const = largeNum
+It will take the parameter of numArray
+Make a new variable called 
+*/
+
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
 // const arr1 = [3, 7, 10, 5, 4, 3, 3]
