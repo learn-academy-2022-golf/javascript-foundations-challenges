@@ -40,42 +40,59 @@
     //conditional that checks for one letter within a string
 // invoke function
 
-const comboArr = [
-   7,
-   "n",
-  true,
-  "i",
-  "c",
-  10,
-  "e",
-  -388,
-  "w",
-  3,
-  "o",
-  0,
-  "r",
-  false,
-  "k"
-]
+// const comboArr = [
+//    7,
+//    "n",
+//   true,
+//   "i",
+//   "c",
+//   10,
+//   "e",
+//   -388,
+//   "w",
+//   3,
+//   "o",
+//   0,
+//   "r",
+//   false,
+//   "k"
+// ]
 
-const makeLetterArray = (arr) =>{
-    let letterArray = []
-    for (let i=0; i<arr.length; i++){
-        if (typeof arr[i] === "string")
-        letterArray.push(arr[i])
-    }  return letterArray
-}
-console.log(makeLetterArray(comboArr))
+// const makeLetterArray = (arr) =>{
+//     let letterArray = []
+//     for (let i=0; i<arr.length; i++){
+//         if (typeof arr[i] === "string")
+//         letterArray.push(arr[i])
+//     }  return letterArray
+// }
+// console.log(makeLetterArray(comboArr))
 
 // // output: "nicework"
 // Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
-// // output: 10
+const addThese1 = [1, 2, 3, 4]
+
+// output: 10
 
 // const addThese2 = []
+// const sumNum = (arr) => {
+//     let sum = 0
+//     for (let i = 0; i < arr.length; i++){
+//         sum = sum + arr[i]   
+//     }
+//     return sum
+// }
+// console.log(sumNum(addThese2));
 // // output: 0
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// const indexHighestNumber = [1, 4, 2, 3]
+//finding largest number in array. built in function, 
+
+const indexHighestNumber = [1, 4, 2, 3]
+const largestNum = (arr) => {
+    return arr.sort().pop()
+
+}
+console.log(largestNum(indexHighestNumber));
 // // output: 1
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
