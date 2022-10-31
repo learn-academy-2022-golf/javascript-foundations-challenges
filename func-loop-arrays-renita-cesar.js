@@ -144,8 +144,8 @@ console.log(largeNum(indexHighestNumber));
 
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
-// const arr1 = [3, 7, 10, 5, 4, 3, 3]
-// const arr2 = [7, 8, 2, 3, 1, 5, 4]
+const arr1 = [3, 7, 10, 5, 4, 3, 3]
+const arr2 = [7, 8, 2, 3, 1, 5, 4]
 // // output: [3, 7, 10, 5, 4, 8, 2, 1]
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 // const arrayLength = 6
