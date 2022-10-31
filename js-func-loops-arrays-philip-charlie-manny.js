@@ -89,10 +89,27 @@ const stringOnly = (arr) => {
     return stringArr
 }
 
-console.log(stringOnly(comboArr))
+// console.log(stringOnly(comboArr))
 
 // Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
+
+// Create function sumNumbers
+// Need a loop to add the sum of each number, store the result of this into a new variable named
+// Push those results to the variable we created
+// Pull the variable back in, add the next number in the array with a loop
+    // Empty array, pull first/next index into the array and add them together
+// Return the sum of the numbers, call the new function and log to the console
+
+const addThese1 = [1, 2, 3, 4]
+const sumNumbers = (arr) => {
+    let newNumbers = 0
+    for (let i = 0; i < arr.length; i++) {
+        newNumbers += arr[i]    // newNumbers + arr[i] = *new* newNumbers
+    }
+    return newNumbers
+}
+console.log(sumNumbers(addThese1))
+
 // // output: 10
 
 // const addThese2 = []
