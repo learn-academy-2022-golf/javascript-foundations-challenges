@@ -34,16 +34,28 @@ const newR = (nums) => {
 
 console.log(newR(testArr1))
 
-
 // // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 // // const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 // // // output: [-7, 3, 5, 13]
- 
+ //create a function that will return a new array with only the odd numbers from given testArr2
+ //create a varible 
+// if(oddNums % 2 !==0)
+
 const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
-const odd = (odd1) => {
-    
+// const odd = (odd1) => {  
+// }
+
+const odd = (oddNums) => {
+  let array2 = []
+  for (let i = 0; i < oddNums.length; i++) 
+  {
+    if(oddNums / 2 !==0)
+    array2.push(oddNums[i] % 2)
+  }
+  return array2
 }
 
+console.log(odd(testArr2))
 
 
 
