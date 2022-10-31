@@ -57,15 +57,29 @@ const lettersOnly = (arr) => {
         }
     }
    const newString = newArr.join("")
+   return newString
 }
-console.log(newArr)
+console.log(lettersOnly(comboArr))
 // // output: "nicework"
 // Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
+const addThese1 = [1, 2, 3, 4]
+
+
+
 // // output: 10
 
-// const addThese2 = []
+const addThese2 = []
 // // output: 0
+
+const addedNums = (arr) => {
+    for (let i =0; i < arr.length; i++) {
+        let count = 0
+        count += arr[i]
+    }
+    return count
+}
+console.log(addedNums(addThese1))
+console.log(addedNums(addThese2))
 // Create a function that takes in an array of numbers and returns the index of the largest number.
 // const indexHighestNumber = [1, 4, 2, 3]
 // // output: 1
