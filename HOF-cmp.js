@@ -63,14 +63,34 @@ let lettersCombined = letters.join("")
 
 
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
-// const filterArrayValues = [58, "", "abcd", true, null, false, 0]
+const filterArrayValues = [58, "", "abcd", true, null, false, 0]
 // // output: [58, "abcd", true]
+// create a function called trueValues
+    //parameter is array
+    // inside the function create an anonymous function
+        //anon function will have filter built in method
+            //filter method will be utilized to return values not containing the following
+                //false, null, 0, or blank values
+//call the function trueValues with argument filterArrayValues
 
+const trueValues = (array) => {
+    return array.filter(value => {
+        return value !== false && value !== null && value !== 0 && value !== ""
+    })   
+}
+
+//console.log(trueValues(filterArrayValues))
 
 // 🏔 Stretch Goals
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// const str = "javascript is awesome"
+const str = "javascript is awesome"
 // // output: "jvscrpt s wsm"
+const noVowels = (array) => {
+    return array.filter(value => {
+        return value !== array.includes("a") 
+    })
+}
+console.log(noVowels(str))
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 // const arr1 = [3, 7, 10, 5, 4, 3]
 // const arr2 = [7, 8, 2, 1, 5, 4]
