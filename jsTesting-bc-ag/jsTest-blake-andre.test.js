@@ -20,9 +20,9 @@
     // create parameter "string"
     // create conditional with inputs returning expected outputs
 const areYouTired = (string) => {
-    if (string === "yes") {
+    if (string.toLowerCase() === "yes") {
         return "drink coffee"
-    } else if (string === "no") {
+    } else if (string.toLowerCase() === "no") {
         return "keep working"
     } else {
         return "why are you doing this to me"
@@ -31,8 +31,29 @@ const areYouTired = (string) => {
 
 // Create the function that will make the test pass.
 // Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
+ //input: "stressed" as a strign 
+ //output: write an output that returns "relax" and "Keep going" 
+describe("areYouStressed", () => {
+    it("returns relax if stressed and keep going if not stressed", () => {
+        expect(areYouStressed("yes")).toEqual("relax")
+        expect(areYouStressed("no")).toEqual("keep going")
+        expect(areYouStressed("Rum")).toEqual("random balogna")
+    })
+})
+
+const areYouStressed = (string) => {
+    if (string.toLowerCase()==="yes"){
+        return "relax"
+    } else if (string.toLowerCase()==="no"){
+        return "keep going"
+    } else {
+        return "random balogna"
+    }
+}
 // Create the function that will make the test pass.
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+//input: 
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in two numbers and returns the smaller number.
 // Create the function that will make the test pass.
