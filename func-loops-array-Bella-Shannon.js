@@ -64,7 +64,7 @@ const sum = (arr) => {
     }
     return newAdd
 }
-console.log(mult3(testArr1))
+console.log(3(testArr1))
 
 // const addThese2 = []
 // // output: 0
