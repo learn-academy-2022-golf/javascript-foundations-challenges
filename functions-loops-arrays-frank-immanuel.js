@@ -50,156 +50,177 @@
 
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-const arrToString = (arr1) => {
+// const arrToString = (arr1) => {
 
-  // Empty placeholder to start the string
-  let str1 = ""
+//   // Empty placeholder to start the string
+//   let str1 = ""
 
-  // Iterate through the given array
-  for (let i = 0 ; i<arr1.length ; i++){
+//   // Iterate through the given array
+//   for (let i = 0 ; i<arr1.length ; i++){
     
-    // If current thing is a string, add it to ours
-    if (typeof arr1[i] === "string"){
+//     // If current thing is a string, add it to ours
+//     if (typeof arr1[i] === "string"){
 
-      str1 += arr1[i]
-    }
-  }
-  return str1
-}
+//       str1 += arr1[i]
+//     }
+//   }
+//   return str1
+// }
 
-const comboArr = [
-  7,
-  "n",
-  true,
-  "i",
-  "c",
-  10,
-  "e",
-  -388,
-  "w",
-  3,
-  "o",
-  0,
-  "r",
-  false,
-  "k"
-]
-console.log('expected output: "nicework"')
-console.log(arrToString(comboArr))
-
-
-// Create a function that takes in an array of numbers and returns the sum.
+// const comboArr = [
+//   7,
+//   "n",
+//   true,
+//   "i",
+//   "c",
+//   10,
+//   "e",
+//   -388,
+//   "w",
+//   3,
+//   "o",
+//   0,
+//   "r",
+//   false,
+//   "k"
+// ]
+// console.log('expected output: "nicework"')
+// console.log(arrToString(comboArr))
 
 
-const sumArrayEntries = (arr1) => {
-
-  // Create a counter
-  let counter = 0
-
-  // Iterate through the supplied array
-  for (let i=0 ; i<arr1.length ; i++){
-    // Update our counter
-    counter += arr1[i]
-  }
-  return counter
-}
-const addThese1 = [1, 2, 3, 4]
-console.log("Expected output: 10")
-console.log(sumArrayEntries(addThese1))
-
-const addThese2 = []
-console.log("Expected output: 0")
-console.log(sumArrayEntries(addThese2))
-
-// Create a function that takes in an array of numbers and returns the index of the largest number.
-const findHighestNumber = (arr1) => {
-  // Create a starting number
-  let largestNumber = arr1[0]
-  let index = 0
-
-  //Iterate through supplied array
-  for (let i=0 ; i<arr1.length; i++){
-    if (largestNumber < arr1[i]){
-      largestNumber = arr1[i]
-      index = i
-    }
-  }
-  return index
-}
-const indexHighestNumber = [1, 4, 2, 3]
-console.log("Expected output: 1")
-console.log(findHighestNumber(indexHighestNumber))
+// // Create a function that takes in an array of numbers and returns the sum.
 
 
-// 🏔 Stretch Goals
+// const sumArrayEntries = (arr1) => {
+
+//   // Create a counter
+//   let counter = 0
+
+//   // Iterate through the supplied array
+//   for (let i=0 ; i<arr1.length ; i++){
+//     // Update our counter
+//     counter += arr1[i]
+//   }
+//   return counter
+// }
+// const addThese1 = [1, 2, 3, 4]
+// console.log("Expected output: 10")
+// console.log(sumArrayEntries(addThese1))
+
+// const addThese2 = []
+// console.log("Expected output: 0")
+// console.log(sumArrayEntries(addThese2))
+
+// // Create a function that takes in an array of numbers and returns the index of the largest number.
+// const findHighestNumber = (arr1) => {
+//   // Create a starting number
+//   let largestNumber = arr1[0]
+//   let index = 0
+
+//   //Iterate through supplied array
+//   for (let i=0 ; i<arr1.length; i++){
+//     if (largestNumber < arr1[i]){
+//       largestNumber = arr1[i]
+//       index = i
+//     }
+//   }
+//   return index
+// }
+// const indexHighestNumber = [1, 4, 2, 3]
+// console.log("Expected output: 1")
+// console.log(findHighestNumber(indexHighestNumber))
 
 
-// Create a function that takes in two arrays and returns one array with no duplicate values.
-const noDuplicate = (array1, array2) => {
+// // 🏔 Stretch Goals
 
-  // Function to remove duplicate entries from within each array
-  const noInnerDuplicate = (array3) => {
+
+// // Create a function that takes in two arrays and returns one array with no duplicate values.
+// const noDuplicate = (array1, array2) => {
+
+//   // Function to remove duplicate entries from within each array
+//   const noInnerDuplicate = (array3) => {
     
-    // Iterate through the array
-    for (let i = 0 ; i < array3.length ; i++){
-      for (let j = 0 ; j < array3.length ; j++){
-        if (i != j && array3[i]===array3[j]){
-          // Remove j index of duplicate
-          array3.splice(j,1)
-        }
-      }
-    }
-    return array3
-  }
+//     // Iterate through the array
+//     for (let i = 0 ; i < array3.length ; i++){
+//       for (let j = 0 ; j < array3.length ; j++){
+//         if (i != j && array3[i]===array3[j]){
+//           // Remove j index of duplicate
+//           array3.splice(j,1)
+//         }
+//       }
+//     }
+//     return array3
+//   }
 
-  // Remove inner duplicates
-  array1 = noInnerDuplicate(array1)
-  array2 = noInnerDuplicate(array2)
+//   // Remove inner duplicates
+//   array1 = noInnerDuplicate(array1)
+//   array2 = noInnerDuplicate(array2)
 
-  // Scan for duplicate entries and remove duplicate item from one
-  for (let i=0 ; i < array1.length ; i++){
-    for (let j=0 ; j < array2.length ; j++){
+//   // Scan for duplicate entries and remove duplicate item from one
+//   for (let i=0 ; i < array1.length ; i++){
+//     for (let j=0 ; j < array2.length ; j++){
 
-      if (array1[i]===array2[j]){
+//       if (array1[i]===array2[j]){
 
-        // Remove duplicate item from array 2
-        array2.splice(j,1)
+//         // Remove duplicate item from array 2
+//         array2.splice(j,1)
         
-      }
-    }
-  }
-  // concatenate the arrays
-  return array1.concat(array2)
-}
-const arr1 = [3, 7, 10, 5, 4, 3, 3]
-const arr2 = [7, 8, 2, 3, 1, 5, 4]
-console.log("expected output: [3, 7, 10, 5, 4, 8, 2, 1]")
-console.log(noDuplicate(arr1, arr2)) // Close enough
+//       }
+//     }
+//   }
+//   // concatenate the arrays
+//   return array1.concat(array2)
+// }
+// const arr1 = [3, 7, 10, 5, 4, 3, 3]
+// const arr2 = [7, 8, 2, 3, 1, 5, 4]
+// console.log("expected output: [3, 7, 10, 5, 4, 8, 2, 1]")
+// console.log(noDuplicate(arr1, arr2)) // Close enough
 
 
-// Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
-const funnyFunction = (num1, num2) => {
-  let funnyArray = []
-  for (let i = 0 ; i < num1 ; i++){
-    funnyArray.push(num2)
-  }
-  return funnyArray
-}
-const arrayLength1 = 6
-const arrayValue1 = 0
-console.log('Expected output: [0, 0, 0, 0, 0, 0]')
-console.log(funnyFunction(arrayLength1, arrayValue1))
+// // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
+// const funnyFunction = (num1, num2) => {
+//   let funnyArray = []
+//   for (let i = 0 ; i < num1 ; i++){
+//     funnyArray.push(num2)
+//   }
+//   return funnyArray
+// }
+// const arrayLength1 = 6
+// const arrayValue1 = 0
+// console.log('Expected output: [0, 0, 0, 0, 0, 0]')
+// console.log(funnyFunction(arrayLength1, arrayValue1))
 
-const arrayLength2 = 4
-const arrayValue2 = 11
-console.log('Expected output: [11, 11, 11, 11]')
-console.log(funnyFunction(arrayLength2, arrayValue2))
+// const arrayLength2 = 4
+// const arrayValue2 = 11
+// console.log('Expected output: [11, 11, 11, 11]')
+// console.log(funnyFunction(arrayLength2, arrayValue2))
 
 
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
-// const addUp1 = 4
-// // 1 + 2 + 3 + 4 = 10
-// // output: 10
+const functionSum = (number) => {
+
+  // Create starting number
+  let start = 0
+
+  // Iterate from 1 to num1
+  for (let i = 0 ; i < number + 1 ; i = i + 1) {
+    start+=i
+  }
+  return start
+}
+
+const addUp1 = 4
+// 1 + 2 + 3 + 4 = 10
+console.log("Expected output: 10")
+console.log(functionSum(addUp1))
+
+
+
+
+
+
+
+
 
 // const addUp2 = 10
 // // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
