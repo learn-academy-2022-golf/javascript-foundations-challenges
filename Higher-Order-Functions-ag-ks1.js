@@ -1,24 +1,25 @@
 // Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
-// const myArray = [3, 9, 15, 4, 10]
-// const multiplier = (array) => {
-//   return array.map((value) => value * 10)
-// }
+const myArray = [3, 9, 15, 4, 10]
+const multiplier = (array) => {
+  return array.map((value) => value * 10)
+}
+console.log(multiplier(myArray))
 
-// console.log(multiplier(myArray))
 // output: [15, 9, 6, 27, 24]
 // output: [30, 90, 150, 40, 100]
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
-
 // const arr2 = [2, 7, 3, 5, 8, 10, 13]
 // // output: [7, 3, 5, 13]
+
+let myArrayOfStuff = [2, 7, 3, 5, 8, 10, 13]
+const onlyOdds = (array) => {
+  return array.filter(value => typeof value === "number" && value % 2 !== 0)
+}
+console.log("onlyOdds:", onlyOdds(myArrayOfStuff))
+
+
+
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use the typeof operator.
-
-// let myArrayOfStuff = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
-// const onlyOdds = (array) => {
-//   return array.filter(value => typeof value === "number" && value % 2 !== 0)
-// }
-// console.log("onlyOdds:", onlyOdds(myArrayOfStuff))
-
 // const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 // // output: "nicework"
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
