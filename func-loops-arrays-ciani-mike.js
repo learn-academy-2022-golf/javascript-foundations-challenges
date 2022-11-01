@@ -32,7 +32,7 @@ const newR = (nums) => {
   return array1
 }
 
-console.log(newR(testArr1))
+console.log("newR", newR(testArr1))
 
 // // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 // // const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
@@ -42,63 +42,105 @@ console.log(newR(testArr1))
 // if(oddNums % 2 !==0)
 
 const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+// const odds = testArr2.filter((num) => num % 2 == 1);
+// console.log("odds", odds)
+
 // const odd = (odd1) => {  
 // }
+// const odd = (oddNums) => {
+//   let array2 = []
+//   for (let i = 0; i < oddNums.length; i++) 
+//   {
+//     if(oddNums / 2 !==0)
+//     array2.push(oddNums[i] % 2)
+//   }
+//   return array2
+// }
+// console.log(odd(testArr2))
 
-const odd = (oddNums) => {
-  let array2 = []
-  for (let i = 0; i < oddNums.length; i++) 
-  {
-    if(oddNums / 2 !==0)
-    array2.push(oddNums[i] % 2)
-  }
-  return array2
-}
-
-console.log(odd(testArr2))
-
-
-
-
-
-
-
-
-
-
-
+const odds3 = [];
+testArr2.forEach((num) => {
+  if (num % 2 === 1){
+    odds3.push(num);
+  } else if(num % 2 === -1)
+  odds3.push(num)
+})
+console.log("odds", odds3)
 
 
 
 // // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-// // const comboArr = [
-// //   7,
-// //   "n",
-// //   true,
-// //   "i",
-// //   "c",
-// //   10,
-// //   "e",
-// //   -388,
-// //   "w",
-// //   3,
-// //   "o",
-// //   0,
-// //   "r",
-// //   false,
-// //   "k"
-// // ]
-// // // output: "nicework"
 
-// // Create a function that takes in an array of numbers and returns the sum.
-// // const addThese1 = [1, 2, 3, 4]
+  //Psuedo Code:  Utilizing the given array, comboArr, create a function that removes all parameter values except strings, utilizing typeOf method.
+      // could not figure out .join("") correctly to finish this challenge
+
+
+const comboArr = [
+  7,
+  "n",
+  true,
+  "i",
+  "c",
+  10,
+  "e",
+  -388,
+  "w",
+  3,
+  "o",
+  0,
+  "r",
+  false,
+  "k"
+]
+
+// var newString = comboArr.split((typeof < true), {
+//   if newString = ""
+  
+// })
+const secretCode = (comboArr) => {
+  return comboArr.filter(value => typeof value === "string")
+}
+console.log("secretCode", secretCode(comboArr))
+
+// output: "nicework"
+
+
+// Create a function that takes in an array of numbers and returns the sum.
+const addThese1 = [1, 2, 3, 4]
 // // // output: 10
-
-// // const addThese2 = []
+const addThese2 = []
 // // output: 0
+//Psuedo Code
+  //Create function that will add all numbers in the given arrays addThese1, and addThese2 utilizing .reduce((a, b) => a + b, 0) method.
+  //Input: addThese1 and addThese2
+  //Output: the sum of each array
+
+  console.log("addThese1", addThese1.reduce((a, b) => a + b, 0))
+
+  console.log("addThese2", addThese2.reduce((a, b) => a + b, 0))
+
+//   const sum1 = (array) => {
+//     let newAddThese = []
+//     for (let i = 0; i < array.length; i++){
+//       newAddThese.push(array[i] + [i++])
+//     }
+//     return newAddThese
+//   }
+// console.log("sum1",sum1(addThese1))
+
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// const indexHighestNumber = [1, 4, 2, 3]
-// // output: 1
+const indexHighestNumber = [1, 4, 2, 3]
+//output: 1
+  //Pseudo Code: Using given array, indexHighestNumber, create function that will return only the index of the largest value. 
+    //Utilizing .forEach
+
+    
+// const highIndex = (array) => {
+//   let 
+// }
+// console.log("highIndex", highIndex(indexHighestNumber))
+
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
 // const arr1 = [3, 7, 10, 5, 4, 3, 3]
