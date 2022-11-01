@@ -36,12 +36,46 @@ const lettersOnly = (array) => {
 console.log(lettersOnly(comboArr))
 
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
-// const filterArrayValues = [58, "", "abcd", true, null, false, 0]
-// // output: [58, "abcd", true]
+const filterArrayValues = [58, "", "abcd", true, null, false, 0]
+// output: [58, "abcd", true]
+
+/*
+Create a function called truthy
+With a parameter of someArray
+Use the .filter() method and input a function of
+
+Return a boolean value -> w/out false, null, 0, or blank values
+*/
+
+const truthy = (someArray) => {
+    return someArray.filter(value => value != false && value != null && value != 0 && value != "")
+}
+
+console.log(truthy(filterArrayValues))
+
 // 🏔 Stretch Goals
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// const str = "javascript is awesome"
-// // output: "jvscrpt s wsm"
+const str = "javascript is awesome"
+// output: "jvscrpt s wsm"
+
+/*
+Create a function called removeVowels
+Takes a parameter of  anyString
+Use method .split("") to convert the string into an array called letterArray
+Use method .filter() on letter array to only include consonants
+*/
+
+const removeVowels = (anyString) => {
+    let letterArray = anyString.split("")
+    let  consonantLetterArray = letterArray.filter(value => {
+        return value == "a" || "e" || "i" || "o" || "u"
+    })
+    console.log(consonantLetterArray)
+    return consonantLetterArray.join("")
+}
+
+console.log(removeVowels(str))
+
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 // const arr1 = [3, 7, 10, 5, 4, 3]
 // const arr2 = [7, 8, 2, 1, 5, 4]
