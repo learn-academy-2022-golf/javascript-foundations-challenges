@@ -57,10 +57,50 @@ const mood = (string) =>{
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
 
+describe("money",() =>{
+    it("returns in budget if a price is lower than $300.", () => {
+        
+        
+       
+        expect(money( 100)).toEqual("in budget")
+        expect(money( 400)).toEqual("out of budget")
+    })
+})
+// Output: ReferenceError: money is not defined.
+
 
 // Create the function that will make the test pass.
+//create a function that takes an argument of a dollar amount.
+//Input: number   output: "in budget" or "out of budget"
+//Need a conditional statement to check and see if the dollar input is less than $300.
+// Return output: based on input
+
+
+const money = (dollars) => {
+     if(dollars <= 300 ){
+        return "in budget" 
+        
+     } else if(dollars > 300){
+        return "out of budget"
+     }
+ }
+
 // Write the test for a function that takes in two numbers and returns the smaller number.
+
+describe("twoNumbers",() =>{
+    it("takes in two numbers and returns the smaller number.", () => {
+
+    }
+
+
+
 // Create the function that will make the test pass.
+const twoNumbers = (value1, value2) => {
+    if()
+}
+
+
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
