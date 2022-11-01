@@ -26,15 +26,13 @@ const arr2 = [2, 7, 3, 5, 8, 10, 13]
 // //     return arr2
 // }
 
-var oddNums = arr2.map((value) =>{
+var oddNums = arr2.map((value) => {
 if(value % 2 != 0){
     return value 
-} else {
-    return oddNums
-}
-
+} else(value % 2 === -1);
+    return value
 })
-console.log(oddNums)
+console.log("arr2",arr2)
 
 
 
