@@ -34,11 +34,30 @@ const onlyLetter = (arr) => {
 console.log(onlyLetter(comboArr))
 // // output: "nicework"
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
-// const filterArrayValues = [58, "", "abcd", true, null, false, 0]
+//function that removes false, null 0 or blank values.
+//return array with truthy values.
+//truthy or falsy
+const filterArrayValues = [58, "", "abcd", true, null, false, 0]
+const onlyTruthy = (arr) =>{
+    return arr.filter((value) => {
+        return value != false && value != null
+    })
+}
+console.log(onlyTruthy(filterArrayValues))
 // // output: [58, "abcd", true]
 // 🏔 Stretch Goals
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// const str = "javascript is awesome"
+//use .split built in method to convert string to an array.
+//return string without vowels.
+//.filter method to remove vowels
+const str = "javascript is awesome"
+const removeVowel = (string) => {
+    return string.split("").filter((value) => {
+        value !== "a" || value !== "e" || value !== "i" || value !== "o" || value !== "u"
+        
+    }) 
+}
+console.log(removeVowel(str))
 // // output: "jvscrpt s wsm"
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 // const arr1 = [3, 7, 10, 5, 4, 3]
