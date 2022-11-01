@@ -29,27 +29,53 @@ for (let i = 0; i < testArr2.length; i++) {
 
 
  // // output: [-7, 3, 5, 13]
-// Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-// const comboArr = [
-//   7,
-//   "n",
-//   true,
-//   "i",
-//   "c",
-//   10,
-//   "e",
-//   -388,
-//   "w",
-//   3,
-//   "o",
-//   0,
-//   "r",
-//   false,
-//   "k"
-// ]
-// // output: "nicework"
-// Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
+// Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof meth
+
+
+
+var comboArr = [
+   7,
+  "n",
+  true,
+  "i",
+  "c",
+  10,
+  "e",
+  -388,
+  "w",
+  3,
+  "o",
+  0,
+  "r",
+  false,
+  "k"
+]
+
+const messege = (array) => {
+    return array.filter(value =>  typeof value === "string")
+  };
+  console.log(messege(comboArr));
+     
+
+  
+  //create a function that will look at the array.length and ONLY return the letters in a "string".
+
+
+
+
+
+     // // output: "nicework"
+
+     // Create a function that takes in an array of numbers and returns the sum.
+     const addThese1 = [1, 2, 3, 4]
+     
+     
+     const numbAdded = (array) =>{
+        return array.m
+     }
+
+
+     
 // // output: 10
 
 // const addThese2 = []
