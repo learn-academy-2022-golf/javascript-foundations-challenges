@@ -20,11 +20,19 @@ console.log("onlyOdds:", onlyOdds(myArrayOfStuff))
 
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use the typeof operator.
-// const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+const messege = (array) => {
+    return comboArr. filter (value => typeof value === "number")
+    };
+    console. log (messege (comboArr));
+
 // // output: "nicework"
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 // const filterArrayValues = [58, "", "abcd", true, null, false, 0]
+
 // // output: [58, "abcd", true]
+
+
 // 🏔 Stretch Goals
 // Create a function that takes in a string and returns a new string with all the vowels removed.
 // const str = "javascript is awesome"
