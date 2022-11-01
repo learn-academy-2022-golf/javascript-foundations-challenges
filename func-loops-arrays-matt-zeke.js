@@ -44,20 +44,56 @@ const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 //         }
 //     }
 //             return newArr
-// }
+// 
 //     console.log(onlyOdd(testArr2))
 
 
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
+
+// We need to write a function that removes every other datatype besides strings
+//input: comboArr 
+// Use typeof function 
+// for value === "", in the parenthesis you can put "number" or "string" for example, to change the datatype it targets
+//output: only string datatype joined together 
+//ACCESSORS AND MUTATORS CAN BE ADDED ONTO A RETURN COMMAND
+
+
 const comboArr = [7,"n",true,"i", "c", 10, "e", -388,"w", 3, "o", 0, "r", false,"k"]
 // // output: "nicework"
-// Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
-// // output: 10
 
-// const addThese2 = []
+// const onlyString = (array) => {
+
+//     let oneType = array.filter (value => typeof value === "string")
+//     return oneType.join("")
+// }
+
+// console.log(onlyString(comboArr))
+
+
+
+
+// Create a function that takes in an array of numbers and returns the sum.
+const addThese1 = [1, 2, 3, 4]
+// // output: 10
+const addThese2 = []
 // // output: 0
+//  
+
+let sum = 0; 
+for (let i = 0; i < array.length; i++)
+const sumOf = (array) => {
+
+    let addThese1 = 
+}
+
+
+
+
+
+
+
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
 // const indexHighestNumber = [1, 4, 2, 3]
 // // output: 1
