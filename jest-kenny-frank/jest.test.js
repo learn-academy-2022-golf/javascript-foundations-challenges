@@ -1,14 +1,18 @@
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
+// Pseudocode:
+// the "describe" block tests the "checkTired" function for expected outputs
 describe ("checkTired", () => {
     it ('returns "drink coffee" if you are tired and "keep working" if you are not tired', () => {
         let output1 = "drink coffee"
+        let input1 = "yes"
         let output2 = "keep working"
-        expect (checkTired("yes")).toEqual(output1)
-        expect (checkTired("no")).toEqual(output2)
+        let input2 = "no"
+        expect (checkTired(input1)).toEqual(output1)
+        expect (checkTired(input2)).toEqual(output2)
     })
 })
-// Create the function that will make the test pass.
 
+// Create the function that will make the test pass.
 const checkTired = (str1) => {
     let output1 = "drink coffee"
         let output2 = "keep working"
@@ -31,6 +35,7 @@ describe ("currentMood", () => {
         expect (currentMood("no")).toEqual(output2)
     })
 })
+
 // Create the function that will make the test pass.
 //Pseudocode:
 // Create a function called currentMood.
@@ -50,10 +55,83 @@ const currentMood = (str1) => {
     }
 }
 
+
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+
+describe ("budgetCheck", () => {
+    it ('returns "in budget" if a price is lower than $300.', () => {
+        let output1 = "within budget"
+        let output2 = "outside of budget"
+        let output3 = "oops"
+        let input1 = 50
+        let input2 = 360
+        let input3 = "a"
+        expect (budgetCheck(input1)).toEqual(output1)
+        expect (budgetCheck(input2)).toEqual(output2)
+        expect (budgetCheck(input3)).toEqual(output3)
+    })
+})
+
 // Create the function that will make the test pass.
+// Write a function named "budgetCheck"
+// Input: a number
+// Use if conditional to check if the number is less than 300
+    // else if the number is greater than 300
+    // else "oops"
+// Outputs: "within budget" or "outside of budget" or "oops"
+const budgetCheck = (num1) => {
+    
+    if (num1 > 300){
+        return "outside of budget"
+    }
+
+    else if (num1 <= 300){
+        return "within budget"
+    }
+
+    else {
+        return "oops"
+    }
+}
+
+
 // Write the test for a function that takes in two numbers and returns the smaller number.
+describe ("smallerOf", () => {
+    it ('takes in two numbers and returns the smaller number.', () => {
+        
+        // Two "good testy"
+        let input1 = 50
+        let input2 = 360
+        // let input3 = "a"
+        
+        // Expected outputs of two inputs
+        let output1 = input1
+        let output2 = input1
+        let output3 = "oops"
+
+        expect (smallerOf(input1, input2)).toEqual(output1)
+        expect (smallerOf(input2, input1)).toEqual(output2)
+        // expect (smallerOf(input3)).toEqual(output3)
+
+    })
+})
 // Create the function that will make the test pass.
+// A function named smallerOf 
+// Accepts two numbers
+// Returns the smaller of the two
+const smallerOf = (num1, num2) => {
+
+    if (num1 < num2){
+        return num1
+    } else if (num1 > num2){
+        return num2
+    }
+    else {
+        return "oops"
+    }
+}
+
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
