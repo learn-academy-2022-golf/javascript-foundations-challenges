@@ -96,12 +96,47 @@ const priceRange = (array, num1, num2) => {
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
 
-// Create the function that will make the test pass.
+/*
+input:10, 5
+Output:return smaller number; 10
 
+*/
+
+describe("smallNum", () => {
+  it("takes in two numbers and returns the smaller number.", () => {
+    expect(smallNum(5, 10)).toEqual(5)
+  })
+})
+
+// Create the function that will make the test pass.
+/*
+Create func called smallerNum
+*/
+const smallNum = (num1, num2) => {
+    if (num1 < num2) return num1
+    else return num2
+    
+}
 
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 
+/*
+input:takes in numbers
+output:returns odd
+*/
+
+describe("oddNum", () => {
+  it("returns whether the number is odd.", () => {
+    expect(oddNum(5)).toEqual(5 % 2 === 0)
+  })
+})
+
 // Create the function that will make the test pass.
+
+const oddNum = (num1) => {
+  if (num1 % 2 === 0) return `${num1} is odd`
+  else return `${num1} is not odd`
+}
 
 
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
@@ -142,5 +177,6 @@ const priceRange = (array, num1, num2) => {
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
 
 // Create the function that will make the test pass.
+
 
 
