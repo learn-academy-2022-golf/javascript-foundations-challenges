@@ -24,12 +24,32 @@ console.log(person.statement())
 
 // Consider this variable:
 
-// const product = {
-//   name: "chair",
-//   price: 24.99
-// }
+ const product = {
+  name: "chair",
+   price: 24.99
+ }
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+// input:product object    output: a string, "The product is a chair. It costs $24.99".
+// within function, return the string using string int. and .notation.
+
+const describeProduct = (object) => {
+      return  `"The product is a ${object.name}. It costs $${object.price}."` 
+}
+
+console.log(describeProduct(product))
+
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+        // take an object as an argument
+        //output: object.price + 7% tax then rounded to .2 decimals
+
+        const totalWithTax = (object) => {
+           return Math.round (object.price + ( object.price * .07 Math.round ))
+    }
+
+console.log(totalWithTax(product))
+
+
+
 // Consider this variable:
 
 // const lunch = {
