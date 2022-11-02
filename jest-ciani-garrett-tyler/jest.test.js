@@ -87,22 +87,38 @@ const money = (dollars) => {
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
 
-describe("twoNumbers",() =>{
-    it("takes in two numbers and returns the smaller number.", () => {
-
-    }
-
+describe("twoNumbers", ()=> {
+    it("takes in two numbers and returns the smaller number", () => {
+        expect(twoNumbers(10,5)).toEqual(5)
+    })
+})
 
 
 // Create the function that will make the test pass.
 const twoNumbers = (value1, value2) => {
-    if()
+    if(value1 < value2) return value1
+    else return value2
 }
 
 
 
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
+describe("isOdd", () => {
+    it("test if the inputted number is odd or even", () => {
+        expect(isOdd(5)).toEqual("odd")
+        expect(isOdd(6)).toEqual("even")
+    })
+})
+
+
 // Create the function that will make the test pass.
+
+const isOdd = (num) => {
+    
+    if (num%2!==0) return "odd"
+    else return "even"
+}
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
 // Write the test for a function called rick that returns "Morty".
