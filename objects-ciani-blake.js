@@ -33,14 +33,32 @@ console.log(person.people())
 
 
 
-// Consider this variable:
+//Consider this variable:
   
-//   const product = {
-//     name: "chair",
-//     price: 24.99
-//   }
+  const product = {
+    name: "chair",
+    price: 24.99
+  }
+
+  const totalWithTax = (object) => {
+    let prodMath = object.price * .07 
+    return Math.floor(object.price + prodMath)
+  }
+
 //   Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
+const describeProduct = (object) => {
+  return `The product is a ${object.name}. It costs ${object.price}.`
+}
+console.log(describeProduct(product))
+
 //   Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+
+// const totalWithTax = (object) => {
+//   let prodMath = object.price * .07 
+//   return object.price + 
+// }
+console.log(totalWithTax(product))
 //   Consider this variable:
   
 //   const lunch = {
