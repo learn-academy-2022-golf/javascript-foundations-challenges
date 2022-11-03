@@ -61,13 +61,20 @@ const lunch = {
 // Output: banana
 
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-const lunchSandwich = (object) => {
-    return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients.split("")}.`
-}
-console.log(lunchSandwich(lunch))
+// const lunchSandwich = (object) => {
+//     return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients.join(", ")}.`
+// }
+// console.log(lunchSandwich(lunch))
 
+// Output:--> The ingredients for a PB and Banana sandwich are bread,peanut butter,banana.
+//Second Output:--> The ingredients for a PB and Banana sandwich are bread peanut butter banana.
+// Third Output:--> The ingredients for a PB and Banana sandwich are bread, peanut butter, banana.
+// ( Note: added comma space, passed as argument for join() method, would separate the items in array).
 
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+console.log(lunch.filter((value) => "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."));
+// Output:--> TypeError: lunch.filter is not a function. 
+// Note:" .map()and .filter() only work on arrays..."
 // Consider this variable:
 
 // const animals = [
