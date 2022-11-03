@@ -47,22 +47,50 @@ class Latte {
       this.shots = shots
     }
     latteProfiile() {
-        return `"Your ${this.flavor} latte with ${this.milk} milk, ${this.shots}is ready!"`
+        return `"Your ${this.flavor} latte with ${this.milk} milk, ${this.shots} is ready!"`
     }
 }
 
-const latte1 = new Latte ("regular","whole","1shot")
-console.log(latte1.latteProfiile())
 
 
 // Latte Maker: create a class for Latte
 // Write a Latte class that takes a flavor, a milk type, and a number of shots
 // Write a method for your Latte class that outputs the latte's profile
 // Write the code that makes a regular, single shot latte
+const latte1 = new Latte ("regular","whole","1shot")
+
 // Log the regular, single shot latte's profile
+console.log(latte1.latteProfiile())
+
 // Write the code that makes a double shot, hazelnut latte with almond milk.
+const latte2 = new Latte ("hazelnut", "almond", "double shot")
+
 // Log the double shot, hazelnut latte with almond milk's profile.
+console.log(latte2.latteProfiile())
+
+
 // Volume of a Cylinder: create a class for Cylinder
+class Cylinder {
+  constructor(radius, height) {
+    this.radius = radius
+    this.height = height
+  }
+  volume() {
+    const cylinderVolume = Math.PI * (this.radius ** 2) * this.height
+    return Number(cylinderVolume.toFixed(4))
+  }
+}
+
+const cylinder1 = new Cylinder(3, 4)
+const cylinder2 = new Cylinder(6, 10)
+const cylinder3 = new Cylinder(1, 4)
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
+
+console.log(cylinder1.volume())
+console.log(cylinder2.volume())
+console.log(cylinder3.volume())
+
+//-------------------Practice!
+
