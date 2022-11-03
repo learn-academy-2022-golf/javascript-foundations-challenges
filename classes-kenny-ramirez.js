@@ -38,66 +38,41 @@
 // Latte Maker: create a class for Latte
 class Latte {
   constructor(type, cream, sugar) {
-      this.flavor = flavor.toLowerCase()
-      this.milkType = cream
-      this.shots = sugar
-    }
-  
-    latteProfile() {
-      return `A ${this.flavor} latte with ${this.milkType()}, ${this.shots()}`
-    }
-  
-    creams() {
-      if (this.cream > 1) {
-        return `${this.cream} creams`
-      } else {
-        return `${this.cream} cream`
-      }
-    }
-  
-    sugars() {
-      if (this.sugar > 1) {
-        return `${this.sugar} sugars`
-      } else {
-        return `${this.sugar} sugar`
-      }
+    this.flavor = flavor.toLowerCase();
+    this.milkType = type;
+    this.shots = shots;
+  }
+
+  latteProfile() {
+    return `A ${this.flavor} latte with ${this.milkType()}, ${this.shots()}`;
+  }
+
+  milk() {
+    if (this.milkType === "milk") {
+      return `${this.type}`;
+    } else {
+      return `${this.type} milk`;
     }
   }
+
+  shots() {
+    if (this.shots > 1) {
+      return `${this.shots} shots`;
+    } else {
+      return `${this.shots} shot`;
+    }
+  }
+}
 // Write a Latte class that takes a flavor, a milk type, and a number of shots
 // Write a method for your Latte class that outputs the latte's profile
 // Write the code that makes a regular, single shot latte
-const regular = new Latte ("regular", "milk", "one")
+const regular = new Latte("regular", "milk", "one");
 // Log the regular, single shot latte's profile
-console.log(regular.latteProfile())
+console.log(regular.latteProfile());
 // Write the code that makes a double shot, hazelnut latte with almond milk.
+const hazelnut = new Latte("Hazelnut", "Almond", 2);
 // Log the double shot, hazelnut latte with almond milk's profile.
-class Latte {
-  constructor(type, cream, sugar) {
-      this.flavor = flavor.toLowerCase()
-      this.milkType = cream
-      this.shots = sugar
-    }
-  
-    latteProfile() {
-      return `A ${this.type} latte with ${this.creams()}, ${this.sugars()}`
-    }
-  
-    creams() {
-      if (this.cream > 1) {
-        return `${this.cream} creams`
-      } else {
-        return `${this.cream} cream`
-      }
-    }
-  
-    sugars() {
-      if (this.sugar > 1) {
-        return `${this.sugar} sugars`
-      } else {
-        return `${this.sugar} sugar`
-      }
-    }
-  }
+console.log(hazelnut.latteProfile());
 // Volume of a Cylinder: create a class for Cylinder
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
