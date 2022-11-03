@@ -44,27 +44,43 @@ const product = {
   }
 }
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
-console.log(product.describeProduct())
+// console.log(product.describeProduct())
 
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 // should output totalWithTax price $26.74
 // console.log(product.salesTax())
 // console.log(product.taxRound())
-console.log(product.totalWithTax())
+// console.log(product.totalWithTax())
 
 
 
 // Consider this variable:
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"],
+  ingredients1: function () {
+    return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients}`
+  }
+}
 // Write the code that accesses the ingredients property.
+// console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+// console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+// console.log(lunch.ingredients1())
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+const ingredients2 = (array) => {
+   return array.filter((object) => {
+    typeof object.type === this.ingredients1
+  })
+}
+console.log(ingredients2(lunch))
+
 // Consider this variable:
 
 // const animals = [
