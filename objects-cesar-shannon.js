@@ -30,7 +30,7 @@ console.log(person)
 /*
 Use destructuring method in order to log the object with string interpolation 
 */
-console.log(`${person.firstName} ${person.lastName} is from planet ${person.homePlanet}.`)
+// console.log(`${person.firstName} ${person.lastName} is from planet ${person.homePlanet}.`)
 
 // Consider this variable:
 
@@ -38,7 +38,14 @@ const product = {
   name: "chair",
   price: 24.99
 }
+
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
+const describeProduct = () => {
+  return `The product is a ${value.name}. It costs ${value.price}.`
+}
+console.log(describeProduct.product)
+
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 
 
@@ -49,9 +56,19 @@ const product = {
 //   type: "sandwich",
 //   ingredients: ["bread", "peanut butter", "banana"]
 // }
+
 // Write the code that accesses the ingredients property.
+
+// console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+
+// console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+// console.log(`${} ${person.lastName} is from planet ${person.homePlanet}.`))
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
 
