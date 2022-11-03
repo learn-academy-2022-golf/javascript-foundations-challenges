@@ -47,21 +47,75 @@
 
 // Consider this variable:
 
+// const product = {
+//   name: "chair",
+//   price: 24.99
+// }
+// Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
+//Create a function called describeProduct.
+  //The function will take an argument called object.
+  //The function will return "The product is a chair. It costs $24.99"
+//Call the function with product as the argument.
+
+const describeProduct= (product) => {
+    return (`The product is a ${product.name}. It costs $${product.price}`)
+}
+//console.log(describeProduct(product))
+//output:The product is a chair. It costs $24.99
+
 const product = {
   name: "chair",
   price: 24.99
 }
-// Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+
+//Write a function called totalWithTax.
+  //The function will take the product as an argument
+  //Return the total price of the chair that includes a 7% sales tax rounded to two decimals
+//Log the function with product as an argument
+
+const totalWithTax = (object) => {
+   let totalPrice = (object.price * .07 + object.price).toFixed(2)
+   return totalPrice
+}
+//console.log(totalWithTax(product))
+
+//output: 26.74
 // Consider this variable:
 
 // const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+//    name: "PB and Banana",
+//    type: "sandwich",
+//    ingredients: ["bread", "peanut butter", "banana"]
+//  }
 // Write the code that accesses the ingredients property.
+
+//Log lunch.ingredients to access the lunch object utilizing dot notation.
+
+//console.log(lunch.ingredients)
+
+// output:[ 'bread', 'peanut butter', 'banana' ]
+
 // Write the code that access the third ingredient of the lunch object.
+
+//Log lunch.ingredients to access the lunch object utilizing dot notation.
+  //add[2] to get the third position or index of the array
+
+  //console.log(lunch.ingredients[2])
+
+  //output: banana
+
+  const lunch = {
+    name: "PB and Banana",
+    type: "sandwich",
+    ingredients: ["bread", "peanut butter", "banana"]
+    together: =() {
+      return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients}.`
+    }
+  }
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 // Consider this variable:
