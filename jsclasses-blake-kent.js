@@ -38,15 +38,50 @@ console.log(coffee1.coffeeProfile())
 
 // Latte Maker: create a class for Latte
 class Latte {
-    constructor(flavor, milk, shots)
+    constructor(flavor, milk, shots) {
+      this.flavor = flavor
+      this.milk = milk
+      this.shots = shots
+    } 
+
+    latteProfile() {
+      return `A ${this.milk} latte with ${this.flavor}, ${this.shots} shot`
+    }
 }
+
+const latte1 = new Latte("no flavor", "whole milk", 1)
+console.log(latte1.latteProfile())
+
 // Write a Latte class that takes a flavor, a milk type, and a number of shots
+
 // Write a method for your Latte class that outputs the latte's profile
+
 // Write the code that makes a regular, single shot latte
+
 // Log the regular, single shot latte's profile
+
 // Write the code that makes a double shot, hazelnut latte with almond milk.
+
+const latte2 = new Latte("hazelnut", "almond milk", "double")
+console.log(latte2.latteProfile())
+
 // Log the double shot, hazelnut latte with almond milk's profile.
+
 // Volume of a Cylinder: create a class for Cylinder
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
+
+class Cylinder {
+  constructor(height, radius) {
+    this.height = height
+    this.radius = radius
+    this.volume = Math.PI * Math.pow(this.radius, 2) * this.height
+  }
+  getVolume() {
+    return this.volume.toFixed(4)
+  }
+} 
+
+const cyl1 = new Cylinder(7, 5)
+console.log(cyl1.getVolume())
