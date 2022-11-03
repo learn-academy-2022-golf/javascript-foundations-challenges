@@ -69,14 +69,14 @@ var newCoffee = new Coffee ("regular", 1, 2)
 //create a class called Latte with curly braces
 
 class Latte {
-    constructor(flavor, milk, shot) {
+    constructor(flavor,milk,shot) {
       this.flavor = flavor.toLowerCase()
       this.milk = milk.toLowerCase()
       this.shot = shot
     }
   
     latteProfile() {
-      return `A ${this.flavor} latte with ${this.milk()}, ${this.shot()}`
+      return `A ${this.flavor} latte with ${this.milk}, ${this.shots()}`
     }
   
     shots() {
@@ -94,16 +94,70 @@ class Latte {
   //inside the curly braces of constructor use this built in method to reference the names of the (flavor, a milk type, and a number of shots)
   // build in method to lowercase is for any uppercases in the argument of flavor and milk
 // create method shots to utilize an if statement identifing the number of shots in the shots parameter
-    //re
+// if number of shots is > 1, it will return "" number of shots
+// if number of shots is < 1, it will return "" number of shot
+  
     
 // Write a method for your Latte class that outputs the latte's profile
+
+// create a method called latteProfile that will take a class and it's parameters to return `A ${this.flavor} latte with ${this.milk()}, ${this.shot()}`
+
+
 // Write the code that makes a regular, single shot latte
+
+var RegularSingle = new Latte("regular", "none", "single") 
+console.log(RegularSingle)
+
 // Log the regular, single shot latte's profile
+
+console.log(RegularSingle.latteProfile())
+
 // Write the code that makes a double shot, hazelnut latte with almond milk.
+
+var HazelnutDouble = new Latte("hazelnut", "almond milk", "double") 
+console.log(HazelnutDouble)
+
 // Log the double shot, hazelnut latte with almond milk's profile.
+
+console.log(HazelnutDouble.latteProfile())
+
 // Volume of a Cylinder: create a class for Cylinder
+
+// class Cylinder {
+//   constructor(radius, height) {
+//     this.radius = radius
+//     this.height = height
+//   }
+
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
+
+class Cylinder {
+  constructor(radius, height) {
+    this.radius = radius
+    this.height = height
+  }
+volume() {
+  var calculatedVolume = this.radius * this.height * 2 * π
+  return calculatedVolume.toFixed(4)
+  
+} }
+var π = 3.14
+var TallOne = new Cylinder(2, 5)
+console.log(TallOne.volume())
+
 // Write the code that rounds the volume of the cylinder to four decimal places
+
+// volume() {
+//   var calculatedVolume = this.radius * this.height * 2 * π
+//   return calculatedVolume.toFixed(4)
+
 // Write the code that creates three unique cylinder objects
+
+var Cylinder2 = new Cylinder(5, 9)
+console.log(Cylinder2)
+var Cylinder3 = new Cylinder(3, 7)
+console.log(Cylinder3)
+var Cylinder4 = new Cylinder(1, 6)
+console.log(Cylinder4)
 
 
