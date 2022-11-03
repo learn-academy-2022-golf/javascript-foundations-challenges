@@ -94,3 +94,18 @@ console.log(cylinder3.volume())
 
 //-------------------Practice!
 
+class Guitar {
+  constructor (eletric,brand,color ,){
+    this.eletric=eletric
+    this.brand=brand
+    this.color=color
+  }
+  describe () {
+    return `just bought a ${this.color} ${this.eletric} ${this.brand} guitar! `
+  }
+}
+const guitar1 = new Guitar ("eletric","Fender","seagreen")
+console.log(guitar1.describe())
+
+const renitaGuitar = new Guitar ("acustic","costco","red")
+console.log(renitaGuitar.describe()) 
