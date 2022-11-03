@@ -42,11 +42,22 @@ console.log(person.getData())
 
 // Consider this variable:
 
-// const product = {
-//   name: "chair",
-//   price: 24.99
-// }
+const product = {
+  name: "chair",
+  price: 24.99,
+  describeProduct: function () {
+    return `The product is a ${this.name}. It cost $ ${this.price}.`
+  }
+}
+console.log (product.describeProduct())
+
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
+// We have an object named 'product' and we need to create a function. The function name will be describeProduct.
+// We need to give an argument that returns 'the product is a chair. It cost $24.99'.
+
+
+
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 // Consider this variable:
 
