@@ -43,7 +43,8 @@ console.log(describeProduct(product))
         //output: object.price + 7% tax then rounded to .2 decimals
 
         const totalWithTax = (object) => {
-           return Math.round (object.price + ( object.price * .07 Math.round ))
+           let addTax = object.price + (object.price * .07)
+           return addTax.toFixed(2)
     }
 
 console.log(totalWithTax(product))
@@ -52,24 +53,53 @@ console.log(totalWithTax(product))
 
 // Consider this variable:
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+const lunch = {
+   name: "PB and Banana",
+   type: "sandwich",
+   ingredients: ["bread", "peanut butter", "banana"],
+   statement: function () {
+    return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients[0]}, ${this.ingredients[1]}, and ${this.ingredients[2]}.`
+}}
+
 // Write the code that accesses the ingredients property.
+console.log(lunch.ingredients)
+
+
 // Write the code that access the third ingredient of the lunch object.
+console.log(lunch.ingredients[2])
+
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+//input of an object (lunch)
+//output will be a statement including the name, type, and ingredients from the object
+const lunchStatement = (object) => {
+    return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.`
+}
+console.log(lunchStatement(lunch))
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+console.log(lunch.statement())
+
+
 // Consider this variable:
 
-// const animals = [
-//   { name: "Waffles", type: "dog", age: 7 },
-//   { name: "Fluffy", type: "cat", age: 14 },
-//   { name: "Spelunky", type: "dog", age: 4 },
-//   { name: "Hank", type: "cat", age: 11 }
-// ]
+const animals = [
+    { name: "Waffles", type: "dog", age: 7 },
+    { name: "Fluffy", type: "cat", age: 14 },
+    { name: "Spelunky", type: "dog", age: 4 },
+    { name: "Hank", type: "cat", age: 11 }
+]
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+// input will be an array with objects inside
+// output will be an array that only includes object.type === "cat"
+// use .filter and create a conditional statement that looks for the object.type
+/* const onlyCats = (array) => array.filter((object.type) => object.type === "cat")
+console.log(onlyCats(animals)) */
+const onlyCats = animals.filter((value) => value.type === "cat") 
+console.log(onlyCats)
+
+
+
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
