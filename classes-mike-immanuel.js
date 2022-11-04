@@ -46,17 +46,61 @@
     // sweetBlack profile
 
      //upon return switch driver/navigator here
-//   Latte Maker: create a class for Latte
-
-
-
 // Write a Latte class that takes a flavor, a milk type, and a number of shots
+    //Latte Maker: create a class for Latte
+
+class Latte {
+    constructor(flavor, milk, shot) {
+        this.flavor = flavor
+        this.milk = milk
+        this.shot = shot
+    }
+    latteProfile() {
+        return `A ${this.flavor} flavored ${this.milk} latte with a ${this.shot} shot of esspresso.`
+    }
+    
+}
 // Write a method for your Latte class that outputs the latte's profile
+let order3 = new Latte("vanilla", "coldstone", "triple")
+console.log(order3.latteProfile())
+// -->A vanilla flavored coldstone latte with a triple shot of esspresso.
+
 // Write the code that makes a regular, single shot latte
+const order1 = new Latte("regular", "creamer", "single")
+
 // Log the regular, single shot latte's profile
+console.log(order1)
+console.log(order1.latteProfile())
+// --> Latte { flavor: 'regular', milk: 'creamer', shot: 'single' }
+// --> A regular flavored creamer latte with a single shot of esspresso.
+
 // Write the code that makes a double shot, hazelnut latte with almond milk.
+const order2 = new Latte("hazdelnut", "almond milk", "double")
+
 // Log the double shot, hazelnut latte with almond milk's profile.
+console.log(order2)
+console.log(order2.latteProfile())
+// --> Latte { flavor: 'hazdelnut', milk: 'almond milk', shot: 'double' }
+// --> A hazdelnut flavored almond milk latte with a double shot of esspresso.
+
+
+
+
+
+
 // Volume of a Cylinder: create a class for Cylinder
+
+class Cylinder {
+    constructor(radius, height){
+        this.radius = radius
+        this.height = height
+    }
+    cylinderVolume() {
+        return `${radius} * ${radius} * ${height} * Math.PI
+    }
+
+}
+
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
